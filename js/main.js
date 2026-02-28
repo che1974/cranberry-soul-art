@@ -137,3 +137,31 @@
     });
   });
 })();
+
+
+/* ===== Social share links ===== */
+(function () {
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  var text = encodeURIComponent('Пам\'яті Лілії Козлової — 102 малюнки, у яких вона продовжує жити');
+
+  var fb = document.querySelector('.share-facebook');
+  var tw = document.querySelector('.share-twitter');
+  var tg = document.querySelector('.share-telegram');
+  var wa = document.querySelector('.share-whatsapp');
+  var cp = document.querySelector('.share-copy');
+
+  if (fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  if (tw) tw.href = 'https://x.com/intent/tweet?url=' + url + '&text=' + text;
+  if (tg) tg.href = 'https://t.me/share/url?url=' + url + '&text=' + text;
+  if (wa) wa.href = 'https://api.whatsapp.com/send?text=' + text + '%20' + url;
+
+  if (cp) {
+    cp.addEventListener('click', function () {
+      navigator.clipboard.writeText(window.location.href).then(function () {
+        cp.classList.add('copied');
+        setTimeout(function () { cp.classList.remove('copied'); }, 2000);
+      });
+    });
+  }
+})();
