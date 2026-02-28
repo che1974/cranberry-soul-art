@@ -389,6 +389,41 @@ img {
   font-style: normal;
 }
 
+/* ===== Brother's Words ===== */
+.brother {
+  padding: 80px 0;
+  background: var(--bg-dark);
+}
+
+.brother-words {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  border-left: none;
+  padding: 0;
+}
+
+.brother-words p {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.brother-words footer {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-style: normal;
+}
+
+.brother-created {
+  text-align: center;
+  margin-top: 36px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
 /* ===== Footer ===== */
 .site-footer {
   padding: 48px 0;
