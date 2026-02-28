@@ -6,7 +6,8 @@
 
   function setLang(lang) {
     document.querySelectorAll('[data-ua][data-en]').forEach(function (el) {
-      el.textContent = el.getAttribute('data-' + lang);
+      var val = el.getAttribute('data-' + lang);
+      if (val.indexOf('<') !== -1) { el.innerHTML = val; } else { el.textContent = val; }
     });
     langOptions.forEach(function (opt) {
       opt.classList.toggle('active', opt.dataset.lang === lang);
