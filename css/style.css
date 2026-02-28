@@ -264,6 +264,15 @@ img {
   margin-bottom: 0;
 }
 
+.story-text a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+.story-text a:hover {
+  text-decoration: underline;
+}
+
 .story-last-post {
   max-width: 680px;
   margin: 40px auto;
@@ -292,6 +301,15 @@ img {
   font-size: 0.9rem;
   color: var(--text-light);
   font-style: normal;
+}
+
+.story-last-post footer a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+.story-last-post footer a:hover {
+  text-decoration: underline;
 }
 
 .story-mvs {
